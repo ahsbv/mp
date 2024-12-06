@@ -1,0 +1,425 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container {
+    position: sticky;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(11, 11, 12, 0.757);
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 10; 
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.container h3 {
+    padding-top: 10px;
+    margin: 0;
+    color: aqua;
+    position: sticky;
+}
+
+.container ul {
+    display: flex;
+    padding-left: 0px;
+    list-style: none;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+.container li {
+    padding-right: 20px;
+    color: aliceblue;
+    opacity: 0; 
+    transform: translateY(-20px); 
+    animation: fadeInTopToBottom 0s ease-out forwards; 
+}
+
+.container li:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.container li:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.container li:nth-child(3) {
+    animation-delay: 5s;
+}
+
+.container li:nth-child(4) {
+    animation-delay: 7s;
+}
+
+.container li:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+.a1 {
+    background-image: url(i3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 96%;
+    padding-left: 100px;
+    padding-top: 100px;
+    font-size: x-large;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInTopToBottom 3s ease-out forwards;
+}
+
+.a1 h1 {
+    color: aliceblue;
+    opacity: 0;
+    transform: translateY(-20px); 
+    animation: fadeInTopToBottom 3s ease-out forwards;
+}
+
+.a2 h1 {
+    padding: 0 5px;
+}
+.button {
+    color: aliceblue;
+    background-color: green;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-size: large;
+    border-radius: 12px;
+    padding: 16px 60px 16px 58px;
+}
+
+.button:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+.sm {
+    padding-top: 50px;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInTopToBottom 3s ease-out forwards;
+}
+@keyframes fadeInTopToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.au {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInTopToBottom 3s ease-out forwards;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.au h1 {
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInTopToBottom 5s ease-out forwards;
+}
+.au p{
+    width: 30%;
+    text-align: justify;
+    justify-content: space-between;
+}
+/* General styles for the dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-right: 100px;
+}
+
+/* Style for the dropdown button (the main clickable link or image) */
+.dropdown > a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #ddd;
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.dropdown > a:hover {
+    background-color: #bbb;
+}
+
+/* Dropdown menu styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px; /* Rounded corners for the dropdown menu */
+    top: 100%; 
+    left: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    border-bottom: 1px solid #ddd; /* Add separation between items */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .dropdown-content {
+        min-width: 100%; 
+        left: 0; 
+    }
+
+    .dropdown > a {
+        padding: 12px 15px;
+        font-size: 16px; 
+    }
+
+    .dropdown-content a {
+        padding: 15px 20px;
+        font-size: 16px; 
+    }
+    .dropdown {
+        width: 100%;
+    }
+}
+
+.dropdown img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease; 
+}
+
+/* Add a hover effect for the icon (optional) */
+.dropdown:hover img {
+    transform: rotate(180deg); /* Rotate the icon on hover */
+}
+
+.au p {
+    color: rgb(61, 61, 54);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInTopToBottom 3s ease-out forwards;
+    animation-delay: 0.3s; /* Delay for the h3 to appear after the h1 */
+}
+
+@keyframes fadeInTopToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.services-section{
+    animation: fadeInTopToBottom 5s ease-out forwards;
+    background-color: rgb(73, 85, 85);
+}
+
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #f9f9f9;
+    margin: 20px 0;
+    padding-top: 50px;
+    animation: fadeInTopToBottom 5s ease-out forwards;
+    
+}
+
+/* Services Container */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(73, 85, 85);
+}
+
+/* Service Card */
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Container */
+.icon-container {
+    background-color: #e8f8e8; /* Light green background */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Service Title */
+.service-title {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+}
+
+.footer-section {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-column {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+.footer-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.footer-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #64d964;
+    margin-top: 5px;
+}
+.footer-description {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #64d964;
+}
+.contact-details {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.footer-bottom a {
+    color: #64d964;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin: 10px 0;
+    }
+}
